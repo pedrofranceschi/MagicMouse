@@ -10,7 +10,7 @@ class MagicMouse
   # This function should be used to detect if the user
   # is touching the mouse. This function should be called 
   # before any command, because if the user is not touching
-  # the mouse, any reading will return 0.
+  # the mouse, any other will return 0.
     return true unless _get_data == 0.0
     return false
   end

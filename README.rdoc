@@ -1,0 +1,42 @@
+= MagicMouse
+
+== DESCRIPTION:
+
+Library to get Magic Mouse's data from Ruby.
+
+== INSTALL:
+
+Download the library and require the magicmouse.rb file in your code header.
+
+== SYNOPSIS:
+
+The library needs to be initialized:
+
+  >> mouse = MagicMouse.new
+
+Then, if you want to get the X axis position, do:
+
+  >> mouse.x_position
+  => 0.842728
+
+If you want to refresh the values, do:
+
+  >> mouse.refresh
+
+For more informations, take a look at the sample-codes folder.
+
+== REQUIREMENTS:
+
+* Mac OS X with Bluetooth
+* Magic Mouse installed and working.
+
+== TODO:
+
+* Implement multitouch.
+
+== ABOUT:
+
+2009 (C)
+Developed by pH (Pedro Henrique Cavallieri Franceschi)
+You can find me at pedrohfranceschi@gmail.com.
+www.iBlogeek.com - 2006-2009 (C)

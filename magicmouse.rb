@@ -4,8 +4,15 @@ require 'rubygems'
 class MagicMouse
 
   def initialize
+    check_for_files
     refresh
   end 
+  
+  def check_for_files
+    unless File.exists?("/usr/bin/magic_mouse_rb")
+      raise "Missing file: /usr/bin/magic_mouse_rb. To install this file, type 'make install' inside the magic_mouse/mouse/ downlaoded folder."
+    end
+  end
 
   def mouse_is_being_touched 
     # This function should be used to detect if the user
@@ -63,7 +70,7 @@ class MagicMouse
 
   private # _get_data function should be used just inside the class
   def _get_data
-    output = %x[#{Dir.pwd}/mouse/mouse]
+    output = %x[/usr/bin/magic_mouse_rb]
     db = output.split("|")
     db = db[1];
     unless db
